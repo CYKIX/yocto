@@ -1,1 +1,1 @@
-# yocto
+# yocto custom meta layer
