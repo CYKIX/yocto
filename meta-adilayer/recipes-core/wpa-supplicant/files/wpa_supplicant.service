@@ -1,0 +1,11 @@
+[Unit]
+Description=wpa_supplicant service
+After=network.target
+
+[Service]
+ExecStart=/usr/sbin/wpa_supplicant -B -c /etc/wpa_supplicant/wpa_supplicant-wlan0.conf -i wlan0
+ExecStop=/usr/sbin/wpa_cli -i wlan0 terminate
+Type=simple
+
+[Install]
+WantedBy=multi-user.target
